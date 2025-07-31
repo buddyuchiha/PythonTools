@@ -64,7 +64,3 @@ class FileManager:
     
     def get_stat(self, path: str) -> os.stat_result:
         return os.stat(path)
-    
-    def create_file(self, path: str):
-        wit
-    
