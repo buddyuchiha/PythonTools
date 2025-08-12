@@ -1,0 +1,107 @@
+2025-08-11 14:26:27,933 - INFO - Created account
+2025-08-11 14:35:37,207 - INFO - Created account with balance = 0
+2025-08-11 14:36:09,145 - INFO - Created account with balance = 0
+2025-08-11 14:36:18,757 - INFO - Created account with balance = 0
+2025-08-11 14:36:18,757 - ERROR - TransactionLimitError
+2025-08-11 14:36:57,471 - INFO - Created account with balance = 0
+2025-08-11 14:44:47,920 - INFO - Created account with balance = 0
+2025-08-11 14:50:37,481 - INFO - Created account with balance = 0
+2025-08-11 14:50:37,482 - INFO - Account blocked
+2025-08-11 14:50:37,482 - INFO - Account unblocked
+2025-08-11 14:50:37,482 - INFO - Deposite made with 100. New balance: 100
+2025-08-11 14:50:37,482 - INFO - Withdraw made with 20. New balance: 80
+2025-08-11 14:50:37,504 - INFO - Withdraw made with 20. New balance: 60
+2025-08-11 14:50:37,505 - INFO - Withdraw made with 20. New balance: 40
+2025-08-11 14:50:37,505 - INFO - Withdraw made with 20. New balance: 20
+2025-08-11 14:50:37,505 - INFO - Withdraw made with 20. New balance: 0
+2025-08-11 14:50:37,505 - INFO - Deposite made with 10000. New balance: 10000
+2025-08-11 15:37:36,895 - INFO - Created account with balance = 0
+2025-08-11 15:37:36,896 - INFO - Account blocked
+2025-08-11 15:37:36,896 - INFO - Account unblocked
+2025-08-11 15:37:36,896 - INFO - Deposite maded
+2025-08-11 15:37:36,896 - INFO - Withdraw maded
+2025-08-11 15:37:36,896 - INFO - Withdraw maded
+2025-08-11 15:37:36,896 - INFO - Withdraw maded
+2025-08-11 15:37:36,896 - INFO - Withdraw maded
+2025-08-11 15:37:36,896 - INFO - Withdraw maded
+2025-08-11 15:37:36,896 - INFO - Deposite maded
+2025-08-11 15:37:49,449 - INFO - Created account with balance = 0
+2025-08-11 15:37:49,449 - INFO - Account blocked
+2025-08-11 15:37:49,449 - INFO - Account unblocked
+2025-08-11 15:37:49,449 - INFO - Deposite maded
+2025-08-11 15:37:49,449 - INFO - Withdraw maded
+2025-08-11 15:37:49,449 - INFO - Withdraw maded
+2025-08-11 15:37:49,449 - INFO - Withdraw maded
+2025-08-11 15:37:49,450 - INFO - Withdraw maded
+2025-08-11 15:37:49,450 - INFO - Withdraw maded
+2025-08-11 15:37:49,450 - INFO - Deposite maded
+2025-08-11 15:40:11,173 - INFO - Created account with balance = 0
+2025-08-11 15:40:11,174 - INFO - Account blocked
+2025-08-11 15:40:11,174 - INFO - Account unblocked
+2025-08-11 15:40:11,174 - INFO - Deposite maded
+2025-08-11 15:40:11,174 - INFO - Withdraw maded
+2025-08-11 15:40:11,174 - INFO - Withdraw maded
+2025-08-11 15:40:11,174 - INFO - Withdraw maded
+2025-08-11 15:40:11,174 - INFO - Withdraw maded
+2025-08-11 15:40:11,174 - INFO - Withdraw maded
+2025-08-11 15:40:11,174 - INFO - Deposite maded
+2025-08-11 15:40:19,383 - INFO - Created account with balance = 0
+2025-08-11 15:40:19,384 - INFO - Account blocked
+2025-08-11 15:40:19,384 - INFO - Account unblocked
+2025-08-11 15:40:19,384 - INFO - Deposite maded
+2025-08-11 15:40:19,384 - INFO - Withdraw maded
+2025-08-11 15:40:19,384 - INFO - Withdraw maded
+2025-08-11 15:40:19,384 - INFO - Withdraw maded
+2025-08-11 15:40:19,384 - INFO - Withdraw maded
+2025-08-11 15:40:19,384 - INFO - Withdraw maded
+2025-08-11 15:40:19,384 - INFO - Deposite maded
+2025-08-11 15:47:05,730 - INFO - Created account with balance = 0
+2025-08-11 15:47:05,730 - INFO - Account blocked
+2025-08-11 15:47:05,731 - INFO - Account unblocked
+2025-08-11 15:47:05,731 - INFO - Deposite maded
+2025-08-11 15:47:05,731 - INFO - Withdraw maded
+2025-08-11 15:47:05,731 - INFO - Withdraw maded
+2025-08-11 15:47:05,731 - INFO - Withdraw maded
+2025-08-11 15:47:05,731 - INFO - Withdraw maded
+2025-08-11 15:47:05,731 - INFO - Withdraw maded
+2025-08-11 15:47:05,731 - INFO - Deposite maded
+2025-08-11 15:47:15,106 - INFO - Created account with balance = 0
+2025-08-11 15:47:15,106 - INFO - Account blocked
+2025-08-11 15:47:15,106 - INFO - Account unblocked
+2025-08-11 15:47:15,106 - INFO - Deposite maded
+2025-08-11 15:47:15,106 - INFO - Withdraw maded
+2025-08-11 15:47:15,107 - INFO - Withdraw maded
+2025-08-11 15:47:15,107 - INFO - Withdraw maded
+2025-08-11 15:47:15,107 - INFO - Withdraw maded
+2025-08-11 15:47:15,107 - INFO - Withdraw maded
+2025-08-11 15:47:15,107 - INFO - Deposite maded
+2025-08-11 15:47:56,382 - INFO - Created account with balance = 0
+2025-08-11 15:47:56,383 - INFO - Account blocked
+2025-08-11 15:47:56,383 - INFO - Account unblocked
+2025-08-11 15:47:56,383 - INFO - Deposite maded
+2025-08-11 15:47:56,383 - INFO - Withdraw maded
+2025-08-11 15:47:56,383 - INFO - Withdraw maded
+2025-08-11 15:47:56,383 - INFO - Withdraw maded
+2025-08-11 15:47:56,383 - INFO - Withdraw maded
+2025-08-11 15:47:56,383 - INFO - Withdraw maded
+2025-08-11 15:47:56,383 - INFO - Deposite maded
+2025-08-11 15:49:17,605 - INFO - Created account with balance = 0
+2025-08-11 15:49:17,605 - INFO - Account blocked
+2025-08-11 15:49:17,605 - INFO - Account unblocked
+2025-08-11 15:49:17,606 - INFO - Deposite maded
+2025-08-11 15:49:17,606 - INFO - Withdraw maded
+2025-08-11 15:49:17,606 - INFO - Withdraw maded
+2025-08-11 15:49:17,606 - INFO - Withdraw maded
+2025-08-11 15:49:17,606 - INFO - Withdraw maded
+2025-08-11 15:49:17,606 - INFO - Withdraw maded
+2025-08-11 15:49:17,606 - INFO - Deposite maded
+2025-08-11 15:49:50,247 - INFO - Created account with balance = 0
+2025-08-11 15:49:50,248 - INFO - Account blocked
+2025-08-11 15:49:50,248 - INFO - Account unblocked
+2025-08-11 15:49:50,248 - INFO - Deposite maded
+2025-08-11 15:49:50,248 - INFO - Withdraw maded
+2025-08-11 15:49:50,248 - INFO - Withdraw maded
+2025-08-11 15:49:50,248 - INFO - Withdraw maded
+2025-08-11 15:49:50,248 - INFO - Withdraw maded
+2025-08-11 15:49:50,248 - INFO - Withdraw maded
+2025-08-11 15:49:50,248 - INFO - Deposite maded

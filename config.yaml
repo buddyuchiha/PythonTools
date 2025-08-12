@@ -1,0 +1,3 @@
+PATH:
+  LOGS: src/logs.txt
+  TRANSACTIONS: src/transactions.txt  
