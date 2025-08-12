@@ -1,2 +1,8 @@
 PATH:
-  TXT_FILE_PATH: src/files/txt_file_path.txt 
+  TXT_FILE_PATH: src/files/txt_file.txt 
+  JSON_FILE_PATH: src/files/json_file.json
+  CSV_FILE_PATH: src/files/csv_file.csv
+  YAML_FILE_PATH: src/files/yaml_file.yaml
+  INI_FILE_PATH: src/files/ini_file.ini 
+  ENV_FILE_PATH: src/files/env_file.env 
+  

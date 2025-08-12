@@ -14,9 +14,8 @@ class FileClass(ABC):
         with open(path, "w", encoding="utf-8"):
             pass 
 
-
     @abstractmethod
-    def update_file(self):
+    def write_file(self):
         pass
 
     def delete_file(self, path: str) -> None:

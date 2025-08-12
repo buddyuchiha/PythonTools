@@ -1,22 +1,19 @@
+from dotenv import load_dotenv
+
 from app.classes.FileClass import FileClass
 
-class TxtFileClass(FileClass):
-    def __init__(self) -> None:
-        super().__init__()
 
-    def read_file(self, path: str) -> str:
+class EnvFileClass(FileClass):
+    def read_file(self, path: str) -> any:
         try:
             with open(path, "r", encoding="utf-8") as file:
-                return file.read() 
+                return load_dotenv(path)
         except FileNotFoundError as e:
             print(e)
-
-    def save_file(self):
-        pass 
-
-    def write_file(self, path: str, data: str) -> None:
+    
+    def write_file(self, path: str, data: dict) -> None:
         try:
             with open(path, "w", encoding="utf-8") as file:
                 file.write(data)
         except FileNotFoundError as e:
-            print(e) 
+            print(e)
