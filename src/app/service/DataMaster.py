@@ -1,8 +1,8 @@
+import base64
 from datetime import datetime
 from decimal import Decimal
 import uuid
 from pytz import timezone as pytz_timezone
-
 
 from app.utils.logging import logger
 
@@ -27,13 +27,15 @@ class DataMaster:
                 case 6:
                     return "Sunday"
         except ValueError as e:
+            logger.error("week_handler value error")
             raise ValueError(f"Wrong week for date: {date}") from e
 
     def __date_difference_handler(self, date: datetime) -> int:
         try:
             actual = datetime.now()
-            return date.day - actual.day 
+            return (actual - date).days
         except ValueError as e:
+            logger.error("date_difference_handler value error")
             raise ValueError(f"Wrong num of days for date: {date}") from e
 
     def __convert_date_utc(self, date: datetime) -> str:
@@ -42,6 +44,7 @@ class DataMaster:
             dt = samara_tz.localize(date)
             return dt.timetz().tzinfo
         except ValueError as e:
+            logger.error("convert_date_utc value error")
             raise ValueError(f"Wrong date {date}") from e
         
     def __decimal_checker(
@@ -51,11 +54,17 @@ class DataMaster:
             num2: float
             ) -> None | Exception:
         if not isinstance(num1, (int, float)) \
-            and not isinstance(operation, (str)) \
-                and not isinstance(num2, (int, float)):
+            or not isinstance(operation, (str)) \
+                or not isinstance(num2, (int, float)):
+            logger.error("decimal_checker value error")            
             raise TypeError(f"Wrong type: {num1} {operation} {num2}")
 
-    def decimal_handler(self, num1: float, operation: str, num2: float) -> dict:
+    def decimal_handler(
+            self, 
+            num1: float, 
+            operation: str, 
+            num2: float
+            ) -> dict:
         try:
             self.__decimal_checker(num1, operation, num2)
 
@@ -90,43 +99,55 @@ class DataMaster:
                         "Float"   : num1 * num2
                     }
         except ValueError as e:
+            logger.error("decimal_handler value error")            
             raise ValueError(f"Wrong operation: {num1} {operation} {num2}") from e
 
 
     def date_handler(self, date: str) -> dict:
         if not isinstance(date, str):
+            logger.error("date handler type error")            
             raise TypeError(f"Date must be string {date}") from e
-        
-        date = datetime.strptime(date, "%d.%m.%Y %H:%M")
+        try: 
+            date = datetime.strptime(date, "%d.%m.%Y %H:%M")
 
-        week = self.__week_handler(date)
-        difference = self.__date_difference_handler(date)
-        samara_utc = self.__convert_date_utc(date)
+            week = self.__week_handler(date)
+            difference = self.__date_difference_handler(date)
+            samara_utc = self.__convert_date_utc(date)
 
-        return {
-            "Week"            : week,
-            "Days difference" : difference,
-            "Samara UTC"      : samara_utc
-        }
+            return {
+                "Week"            : week,
+                "Days difference" : difference,
+                "Samara UTC"      : samara_utc
+            }
+        except ValueError as e:
+            logger.error("date_handler value error")            
+            raise ValueError(f"Wrong date: {date}") from e
     
     def uuid(self, version: int) -> uuid:
         if not isinstance(version, int):
+            logger.error("uuid type error")            
             raise TypeError(f"Wrong type: {version}")
         try:
             match version:
                 case 1:
                     return uuid.uuid1().int
-                case 2:
-                    return uuid.uuid2().int
                 case 3:
-                    return uuid.uuid3().int
+                    return uuid.uuid3(
+                        uuid.NAMESPACE_DNS, "example.com"
+                        ).int
                 case 4:
                     return uuid.uuid4().int
-        except ValueError as e:
+                case 5:
+                    return uuid.uuid5(
+                        uuid.NAMESPACE_DNS, "example.com"
+                        ).int
+        except ValueError:
+            logger.error("uuid value error")            
             raise ValueError(f"Wrong value: {version}")
             
     def code_string(self, string: str, code: str) -> bytes:
         if not isinstance(string, str) and not isinstance(code, str):
+            logger.error("code_string type error")            
             raise TypeError(f"Wrong type {string}, {code}")
         
         try:
@@ -136,7 +157,8 @@ class DataMaster:
                 case "CP1251":
                     return string.encode("CP1251")
                 case "Base64":
-                    return string.encode("Base64")
-        except ValueError as e:
+                    return base64.b64encode(string.encode("UTF-8"))
+        except ValueError:
+            logger.error("code_string value error")            
             raise ValueError(f"Wrong code: {code}")
         
