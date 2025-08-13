@@ -15,12 +15,12 @@ class CsvFileClass(FileClass):
 
                 return data
         except FileNotFoundError as e:
-            print(e)
+            raise FileNotFoundError(f"File not found path: {path}") from e
             
     def write_file(self, path: str, data: list[list]) -> None:
         try:
-            with open(path, "w", newline='', encoding="utf=8") as file:
+            with open(path, "w", newline='', encoding="utf-8") as file:
                 writer = csv.writer(file)
                 writer.writerows(data)
         except FileNotFoundError as e:
-            print(e)
+            raise FileNotFoundError(f"File not found path: {path}") from e

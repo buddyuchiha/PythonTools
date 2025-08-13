@@ -10,16 +10,13 @@ class FileClass(ABC):
     def read_file(self):
         pass 
 
-    def create_file(self, path: str = None) -> None:        
-        with open(path, "w", encoding="utf-8"):
-            pass 
-
     @abstractmethod
     def write_file(self):
         pass
 
+    def create_file(self, path: str = None) -> None:        
+        with open(path, "w", encoding="utf-8"):
+            pass 
+
     def delete_file(self, path: str) -> None:
         os.remove(path)
-
-    def convert_file(self):
-        pass 

@@ -8,11 +8,11 @@ class JsonFileClass(FileClass):
             with open(path, "r", encoding="utf-8") as file:
                 return json.load(file)
         except FileNotFoundError as e:
-            print(e)
+            raise FileNotFoundError(f"File not found path: {path}") from e
     
     def write_file(self, path: str, data: dict) -> None:
         try:
             with open(path, "w", encoding="utf-8") as file:
                 json.dump(data, file)
         except FileNotFoundError as e:
-            print(e)
+            raise FileNotFoundError(f"File not found path: {path}") from e

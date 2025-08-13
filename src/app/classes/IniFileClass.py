@@ -12,11 +12,13 @@ class IniFileClass(FileClass):
         try:
             return self.config.read(path)
         except FileNotFoundError as e:
-            print(e)
+            raise FileNotFoundError(f"File not found path: {path}") from e
     
     def write_file(self, path: str, data: dict) -> None:
         try:
-            with open(path, "w", encoding="utf-8") as file:
-                self.config.write(path, data)
+            for section, options in data.items():
+                self.config[section] = options
+            with open(path, 'w', encoding='utf-8') as file:
+                self.config.write(file)
         except FileNotFoundError as e:
-            print(e)
+            raise FileNotFoundError(f"File not found path: {path}") from e
