@@ -1,0 +1,9 @@
+Hello world!
+This is a test file.
+
+It contains:
+- 3 paragraphs,
+- 5 lines,
+- and some punctuation!
+
+The end.

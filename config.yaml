@@ -1,0 +1,7 @@
+PATH:
+  LOG_FILE : src/logs.txt
+  TEST_FILE_1: src/files/test_file_1.txt
+  TEST_FILE_2: src/files/test_file_2.txt 
+  TEST_FILE_3: src/files/test_file_3.txt
+SETTINGS:
+  PROCESSES_NUM: 4  

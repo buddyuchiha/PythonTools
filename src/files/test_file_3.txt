@@ -1,0 +1,8 @@
+This file tests ALL the edge cases!
+
+1. Punctuation: !@#$%^&*()_+{}[]|\\:;"'<>?,./~
+2. Numbers: 3.14159 -100 0xFF 1e10
+3. Whitespace:    tabs->\t<-and    multiple    spaces
+4. Escapes: \n\n\n (3 newlines) \t (1 tab)
+5. Unicode: π ≈ 3.14, 汉字, 😊, русский
+6. No trailing newline```
