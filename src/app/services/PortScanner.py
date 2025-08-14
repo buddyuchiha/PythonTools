@@ -8,7 +8,7 @@ from app.utils.logging import logger
 from core.config import config
 
 class PortScanner:
-    def __init__(self, adress: str, ports: str, threads_num: int) -> None:
+    def __init__(self, adress: str, ports: str, threads_num: int = 5) -> None:
         self.__input_checker(adress, ports, threads_num)
 
         self.adress = adress

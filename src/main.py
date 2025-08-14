@@ -5,14 +5,13 @@ from core.config import config
 if __name__ == "__main__":
     ps = PortScanner(
         config['SETTINGS']['HOST'], 
-        config['SETTINGS']['PORTS'],
-        config['SETTINGS']['THREADS']       
-        )
-    
+        config['SETTINGS']['PORTS']        
+    )
+
     logger.info(
-        f"Created PortScanner with adress: {config['SETTINGS']['HOST']}, "
-        f"ports: {config['SETTINGS']['PORTS']}, "
-        f"threads: {config['SETTINGS']['THREADS']}"
+        f"{ps.adress}"
+        f"ports: {ps.start_port} - {ps.final_port}, "
+        f"threads: {ps.threads_num}"
         )
     
     ps.start() 
