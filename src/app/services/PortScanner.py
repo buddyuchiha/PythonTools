@@ -2,19 +2,24 @@ from queue import Queue
 import re
 import socket
 import threading
+import time
 
 from app.utils.logging import logger
+from core.config import config
 
 class PortScanner:
-    def __init__(self, adress: str, ports: str, threads_num: int):
+    def __init__(self, adress: str, ports: str, threads_num: int) -> None:
         self.__input_checker(adress, ports, threads_num)
 
         self.adress = adress
         self.start_port, self.final_port = \
             [int(port) for port in ports.rsplit('-')]
+
+        if self.final_port < self.start_port:
+            raise ValueError(f"{self.final_port} < {self.final_port}")
+
         self.threads_num = threads_num
         self.port_queue = Queue()
-
 
     def __input_checker(
         self, 
@@ -34,24 +39,26 @@ class PortScanner:
         if not re.fullmatch(r"^\d{1,6}-\d{1,6}$", ports):
             raise ValueError(f"Incorrect ports were input: {ports}")
 
-    def create_socket(self) -> None:
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    
-    def __scanner(self):
+    def __scanner(self) -> None:
         while True:
+            
             port = self.port_queue.get()
             if port is None:
                 self.port_queue.task_done()
                 break
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.settimeout(1)
-            logger.info(self.adress, port)
-            result = sock.connect_ex((self.adress, port))
-            # with threading.Lock():
+            
+            try: 
+                sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sock.settimeout(config["SETTINGS"]["TIMEOUT"])
+                result = sock.connect_ex((self.adress, port))
+            except Exception as e:
+                logger.error(f"Error scanning port {port} : {e}")
+
             if result == 0:
                 logger.info(f"Port {port} is open.")
             else:
                 logger.info(f"Port {port} is closed.")    
+            
             sock.close()
             self.port_queue.task_done()             
 
@@ -59,7 +66,6 @@ class PortScanner:
         threads = []
 
         for port in range(self.start_port, self.final_port + 1):
-            logger.info(f"Added port: {port} to the port_queue")
             self.port_queue.put(port)
 
         for _ in range(self.threads_num):
@@ -75,7 +81,15 @@ class PortScanner:
         for t in threads:
             t.join()
         
-    def start(self):
-        # self.create_socket()
-
+    def start(self) -> None:
+        logger.info(
+            f"Starting scanning ports for adress {self.adress}, "
+            f"ports {self.start_port} - {self.final_port}."
+            )
+                
+        start = time.time()
         self.__init_threads()
+        finish = time.time()
+        
+        result = finish - start
+        logger.info(f"Time result: {result} seconds.")

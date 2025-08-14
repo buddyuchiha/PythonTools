@@ -1,2 +1,7 @@
 PATH:
   LOG_FILE: src/logs.txt
+SETTINGS:
+  HOST: "127.0.0.1"
+  PORTS: "10-100"
+  THREADS: 8
+  TIMEOUT: 0.3
