@@ -1,0 +1,3 @@
+2025-08-18 12:16:11,241 - INFO - Process: analyzer-1, PID: 148962025-08-18 12:16:11,249 - INFO - Process: analyzer-0, PID: 9420
+
+2025-08-18 12:16:11,254 - INFO - Process: analyzer-2, PID: 15096

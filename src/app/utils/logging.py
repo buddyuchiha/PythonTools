@@ -10,4 +10,4 @@ file_handler = logging.FileHandler(config['PATH']['LOG_FILE'], 'w', encoding='ut
 file_handler.setLevel("INFO")
 file_handler.setFormatter(formatter)
 
-logger.addHandler(logger)
+logger.addHandler(file_handler)
