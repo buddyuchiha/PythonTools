@@ -1,12 +1,14 @@
-from multiprocessing import Process, Queue, current_process
+from multiprocessing import current_process, Queue, Process
 import re
 
 from app.utils.logging import logger    
 from core.config import config
 
+
 class FileAnalysis:
     def __init__(self, *args) -> None:
         self.paths = []
+
         for arg in args:
             self.handle_arg(arg)
             self.paths.append(arg)
@@ -65,6 +67,7 @@ class FileAnalysis:
     def handle_arg(self, arg: str) -> None:
         if not isinstance(arg, str):
             raise ValueError(f"Path must be string, got {type(arg)}")
+        
         if not arg.endswith(".txt"):
             raise ValueError(f"File must be .txt, got {arg}")
 
