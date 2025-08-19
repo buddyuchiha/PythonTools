@@ -14,7 +14,9 @@ class WebCrawler:
         self.urls = urls
 
         self.headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) \
+                AppleWebKit/537.36 (KHTML, like Gecko) \
+                    Chrome/125.0.0.0 Safari/537.36",
             "Accept": "application/json",
             "Accept-Encoding": "gzip, deflate",
             "Connection": "keep-alive"
@@ -55,7 +57,9 @@ class WebCrawler:
         try: 
             timeout = aiohttp.ClientTimeout(total=5)
 
-            async with aiohttp.ClientSession(headers=self.headers, timeout=timeout) as session:
+            async with aiohttp.ClientSession(
+                headers=self.headers, timeout=timeout
+                ) as session:
                 async with session.get(url) as response:
                     html = await response.text()
 
@@ -74,6 +78,7 @@ class WebCrawler:
         async def fetch_with_semaphore(url) -> tuple[int, str]:
             async with self.Semaphore:
                 await asyncio.sleep(0.5)
+                
                 try: 
                     url, title, status =  await self.fetch(url)
                     return url, title, status 
