@@ -1,0 +1,9 @@
+PATH:
+  LOG_FILE: src/log_file.txt
+  RESULT_FILE: src/result_file.json
+ADRESSES:
+  - "https://example.com"
+  - "https://en.wikipedia.org/wiki/Async/await"
+  - "http://httpbin.org/get"
+  - "https://this-url-will-fail.com"
+  - "https://httpbin.org/status/404"
