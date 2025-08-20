@@ -1,0 +1,14 @@
+2025-08-20 22:17:44,914 - INFO - function logger - Function get_user_data started
+2025-08-20 22:17:44,915 - INFO - function logger - Function get_user_data finished successfully in 3.337860107421875e-06s
+2025-08-20 22:17:44,915 - INFO - function logger - Result for (<app.services.APIClient.APIClient object at 0x00000261785C1010>, 0), {}: {'status': 200, 'user_id': 0}
+2025-08-20 22:17:44,915 - INFO - function logger - Function post_config started
+2025-08-20 22:17:44,916 - INFO - function logger - Function post_config finished successfully in 8.58306884765625e-06s
+2025-08-20 22:17:44,916 - INFO - function logger - Result for (<app.services.APIClient.APIClient object at 0x00000261785C1010>, {'time': 1755713864.915887, 'data': 308}), {}: True
+2025-08-20 22:17:44,917 - INFO - function logger - Function check_health started
+2025-08-20 22:17:44,917 - INFO - function logger - Function check_health finished successfully in 3.814697265625e-06s
+2025-08-20 22:17:44,918 - INFO - function logger - Result for (<app.services.APIClient.APIClient object at 0x00000261785C1010>,), {}: OK
+2025-08-20 22:17:44,918 - INFO - function logger - Function get_user_data started
+2025-08-20 22:17:44,918 - INFO - function logger - Function get_user_data finished successfully in 8.344650268554688e-06s
+2025-08-20 22:17:44,919 - INFO - function logger - Result for (<app.services.APIClient.APIClient object at 0x00000261785C1010>, 1), {}: {'status': 200, 'user_id': 1}
+2025-08-20 22:17:44,919 - INFO - function logger - Function post_config started
+2025-08-20 22:17:44,920 - ERROR - function logger - Function post_config raise an exception: Connection timeout for (<app.services.APIClient.APIClient object at 0x00000261785C1010>, {'time': 1755713864.9196975, 'data': 519}), {}
