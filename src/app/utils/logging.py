@@ -26,7 +26,7 @@ logger.addHandler(file_handler)
 logger.addHandler(stream_handler)
 
 def log_call(level=logging.DEBUG):
-    def decorator(func) -> function:
+    def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs) -> any:
             logger.info(f"Function {func.__name__} started")
