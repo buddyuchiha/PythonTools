@@ -1,0 +1,16 @@
+2023-10-25 23:59:59,999 [INFO] [module_name] Standard message
+2023-01-01 00:00:00,000 [DEBUG] [init] System started
+2023-12-31 23:59:59,999 [ERROR] [shutdown] Critical failure!
+2023-10-25 12:30:45,678 [INFO] [module-with-dash] Support for dashes?
+2023-10-25 12:30:45,678 [CUSTOM] [auth] Can your regex handle unknown statuses?
+2023-10-25 12:30:45,678 [INFO] [module_with_underscores] And underscores?
+2023-10-25 12:30:45,678 [INFO] [mod] What about very short module names?
+2023-10-25 12:30:45,678 [INFO] [a_very_long_module_name_that_exceeds_usual_length] And very long ones?
+2023-10-25 12:30:45,678 [INFO] [auth] Message with numbers 123 and symbols @#!$%^&*()
+2023-10-25 12:30:45,678 [INFO] [auth]          (Message with leading spaces)
+2023-10-25 12:30:45,678 [INFO] [auth] Message with 'single' and "double" quotes
+2023-10-25 12:30:45,678 [INFO] [auth] 
+2023-10-25 12:30:45,678 [INFO] [auth] 
+A line with only whitespace above and this malformed line below
+Date is missing here [INFO] [auth] This line is broken
+2023-10-25 12:30:45,678 [INFO] [auth] This line is correct but has an extra bracket] 

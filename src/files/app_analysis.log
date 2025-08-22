@@ -1,0 +1,14 @@
+2023-10-25 09:15:22,123 [INFO] [auth] User 'john_doe' logged in
+2023-10-25 09:15:25,456 [ERROR] [payment] Invalid card number
+2023-10-25 09:16:10,789 [INFO] [auth] User 'admin' logged in
+2023-10-25 09:17:45,012 [WARNING] [system] Disk usage over 85%
+2023-10-25 09:18:01,345 [INFO] [auth] User 'test_user' logged in
+2023-10-25 09:19:22,678 [ERROR] [payment] Transaction declined
+2023-10-25 09:20:45,901 [INFO] [auth] User 'john_doe' logged out
+2023-10-25 09:21:10,234 [ERROR] [payment] Invalid card number
+2023-10-25 09:22:33,567 [DEBUG] [auth] Session token refreshed for user_id=45
+2023-10-25 09:23:45,890 [INFO] [auth] User 'admin' logged out
+2023-10-25 09:24:10,111 [ERROR] [database] Deadlock detected
+2023-10-25 09:25:22,222 [WARNING] [system] Memory usage high: 2048MB/2560MB
+2023-10-25 09:26:33,444 [INFO] [auth] User 'john_doe' logged in
+2023-10-25 09:27:45,666 [ERROR] [payment] Invalid card number

@@ -1,0 +1,8 @@
+2023-10-25 12:30:45,678 [INFO] [auth] User 'admin' logged in successfully from 192.168.1.1
+2023-10-25 12:31:01,001 [ERROR] [database] Connection timeout after 30000ms
+2023-10-25 12:31:02,105 [WARNING] [auth] Password attempt failed for user 'guest'
+This is a malformed line that doesn't belong here
+2023-10-25 12:32:15,555 [DEBUG] [cache] Missed key: user_profile_5587
+2023-10-25 12:32:45,001 [INFO] [api] GET /api/v1/users/me 200 145ms
+[ERROR] [payment] This line starts incorrectly (missing timestamp)
+2023-10-25 12:33:10,999 [INFO] [email] Newsletter sent to user@example.com
