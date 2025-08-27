@@ -2,3 +2,5 @@ PATH:
   ANALYSIS_LOGS: src/files/app_analysis.log
   BASIC_LOGS: src/files/app_basic.log 
   EDGE_CASES_LOGS: src/files/app_edge_cases.log
+TEMPLATES:
+  LOG_TEMPLATE: \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3} \[\w{1,7}\] \[[a-z_-]+\] .+
